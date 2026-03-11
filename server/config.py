@@ -24,19 +24,8 @@ AI_MODELS = [
 ]
 
 # ============================================================
-# 数据源配置
+# 数据源配置（只需要 history API，无需先获取最新期号）
 # ============================================================
-LATEST_ISSUE_APIS = [
-    {
-        'name': 'marksix6.net',
-        'url': 'https://api3.marksix6.net/lottery_api.php?type=newMacau',
-    },
-    {
-        'name': 'marksix6.net (备用)',
-        'url': 'https://marksix6.net/api/lottery_api.php?type=newMacau',
-    },
-]
-
 HISTORY_API_BASE = 'https://history.macaumarksix.com/history/macaujc2/expect/'
 MACAUJC_API_URL = 'https://api.macaujc.org/api/opencode/2032'
 
@@ -69,3 +58,4 @@ REQUEST_RETRIES = 3
 MAX_DRAWS = 100
 CONCURRENT_WORKERS = 10
 DEBUG = os.environ.get('DEBUG', 'false').lower() == 'true'
+
